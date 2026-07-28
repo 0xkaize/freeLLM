@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, JetBrains_Mono, Fredoka } from "next/font/google";
 import { CircleAlert } from "lucide-react";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 import { Header } from "@/components/header";
@@ -70,6 +71,7 @@ export default function RootLayout({
             </p>
           </footer>
         </div>
+        <Analytics />
       </body>
     </html>
   );
