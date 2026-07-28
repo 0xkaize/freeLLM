@@ -23,6 +23,12 @@ export type Model = {
   tags: ModelTag[];
   url: string;
   addedAt: string;
+  /** Optional card background image, e.g. "/cards/zenmux.png" */
+  cardBg?: string;
+  /** Theme for text/buttons over cardBg. Default "dark" (site look). */
+  cardTheme?: "light" | "dark";
+  /** Invert a light artwork so it fits the dark UI (white→black). */
+  cardBgInvert?: boolean;
 };
 
 export const models: Model[] = [
@@ -49,6 +55,8 @@ export const models: Model[] = [
     tags: ["collection"],
     url: "https://github.com/cheahjs/free-llm-api-resources#groq",
     addedAt: "2026-07-27T00:00:00.000Z",
+    cardBg: "/cards/github.png",
+    cardTheme: "dark",
   },
   {
     id: "api-airforce",
@@ -73,6 +81,9 @@ export const models: Model[] = [
     tags: ["website"],
     url: "https://zenmux.ai/invite/555LC2",
     addedAt: "2026-07-27T00:00:00.000Z",
+    cardBg: "/cards/zenmux.png",
+    cardTheme: "dark",
+    cardBgInvert: true,
   },
   {
     id: "cerebras",
@@ -109,6 +120,8 @@ export const models: Model[] = [
     tags: ["website"],
     url: "https://build.nvidia.com/",
     addedAt: "2026-07-27T00:00:00.000Z",
+    cardBg: "/cards/nvidia.png",
+    cardTheme: "dark",
   },
   {
     id: "cloudflare-workers-ai",
@@ -181,6 +194,8 @@ export const models: Model[] = [
     tags: ["website"],
     url: "https://github.com/marketplace/models",
     addedAt: "2026-07-28T00:00:00.000Z",
+    cardBg: "/cards/github.png",
+    cardTheme: "dark",
   },
   {
     id: "vercel-ai-gateway",
@@ -193,6 +208,8 @@ export const models: Model[] = [
     tags: ["website"],
     url: "https://vercel.com/docs/ai-gateway",
     addedAt: "2026-07-28T00:00:00.000Z",
+    cardBg: "/cards/vercel.png",
+    cardTheme: "dark",
   },
   {
     id: "kilo-gateway",
@@ -244,6 +261,13 @@ export const models: Model[] = [
   //   url           – link the card opens (must start with https://).
   //   addedAt       – ISO date string, e.g. "2025-06-01T00:00:00.000Z".
   //                   Used for the "Newest first" sort.
+  //   cardBg        – (optional) path to a card background image in /public,
+  //                   e.g. "/cards/zenmux.png". Image is object-cover fitted.
+  //   cardTheme     – (optional) "light" | "dark". Pick based on the FINAL look:
+  //                   light = bright card → dark text & buttons
+  //                   dark  = dark card  → light text & buttons
+  //   cardBgInvert  – (optional) true for white artworks: inverts to dark UI
+  //                   (use with cardTheme: "dark").
   //
   // {
   //   id: "your-model-id",
@@ -256,5 +280,7 @@ export const models: Model[] = [
   //   tags: ["website"],
   //   url: "https://example.com/",
   //   addedAt: "2025-07-27T00:00:00.000Z",
+  //   // cardBg: "/cards/yourprovider.png",
+  //   // cardTheme: "light",
   // },
 ];
