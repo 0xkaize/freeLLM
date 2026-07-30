@@ -235,6 +235,18 @@ export const models: Model[] = [
     url: "https://opencode.ai/docs/zen/",
     addedAt: "2026-07-28T00:00:00.000Z",
   },
+  {
+    id: "tokenrouter",
+    provider: "TokenRouter",
+    providerSlug: "tokenrouter",
+    type: ["text", "code"],
+    access: ["free-tier"],
+    status: "operational",
+    freeLimit: "free models appear occasionally — check the catalog",
+    tags: ["website"],
+    url: "https://www.tokenrouter.com/models",
+    addedAt: "2026-07-30T00:00:00.000Z",
+  },
 
   // ── How to add a new model ──────────────────────────────────────────
   // Copy the block below, paste it inside this array (after the entry above,
