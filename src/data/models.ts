@@ -247,6 +247,18 @@ export const models: Model[] = [
     url: "https://www.tokenrouter.com/models",
     addedAt: "2026-07-30T00:00:00.000Z",
   },
+  {
+    id: "orcarouter-offers",
+    provider: "OrcaRouter",
+    providerSlug: "orcarouter",
+    type: ["text", "code"],
+    access: ["free-tier", "signup-credits"],
+    status: "operational",
+    freeLimit: "coupons for free usage — check Offers page",
+    tags: ["website"],
+    url: "https://www.orcarouter.ai/offers",
+    addedAt: "2026-08-01T00:00:00.000Z",
+  },
 
   // ── How to add a new model ──────────────────────────────────────────
   // Copy the block below, paste it inside this array (after the entry above,
